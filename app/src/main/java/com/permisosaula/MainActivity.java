@@ -56,36 +56,36 @@ public class MainActivity extends AppCompatActivity {
         }
 
         int permisoInternet = ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET);
-        if (permisoMedia == PackageManager.PERMISSION_DENIED) {
+        if (permisoInternet == PackageManager.PERMISSION_DENIED) {
 
             int CODIGO_RESP = 300;
-            Toast.makeText(this, "Permiso para Media no ha sido concedido",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Permiso para Internet no ha sido concedido",Toast.LENGTH_SHORT).show();
             requestPermissions(new String[]{Manifest.permission.INTERNET}, CODIGO_RESP);
 
         } else {
-            Toast.makeText(this, "Permiso para Media ha sido concedido",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Permiso para Internet ha sido concedido",Toast.LENGTH_SHORT).show();
         }
 
         int permisoContactos = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS);
-        if (permisoMedia == PackageManager.PERMISSION_DENIED) {
+        if (permisoContactos == PackageManager.PERMISSION_DENIED) {
 
             int CODIGO_RESP = 400;
-            Toast.makeText(this, "Permiso para Media no ha sido concedido",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Permiso para Contactos no ha sido concedido",Toast.LENGTH_SHORT).show();
             requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, CODIGO_RESP);
 
         } else {
-            Toast.makeText(this, "Permiso para Media ha sido concedido",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Permiso para Contactos ha sido concedido",Toast.LENGTH_SHORT).show();
         }
 
-        int permisoUbicacion = ContextCompat.checkSelfPermission(this, Manifest.permission.LOCATION_HARDWARE);
-        if (permisoMedia == PackageManager.PERMISSION_DENIED) {
+        int permisoUbicacion = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_MEDIA_LOCATION);
+        if (permisoUbicacion == PackageManager.PERMISSION_DENIED) {
 
             int CODIGO_RESP = 500;
-            Toast.makeText(this, "Permiso para Media no ha sido concedido",Toast.LENGTH_SHORT).show();
-            requestPermissions(new String[]{Manifest.permission.LOCATION_HARDWARE}, CODIGO_RESP);
+            Toast.makeText(this, "Permiso para Ubicacion no ha sido concedido",Toast.LENGTH_SHORT).show();
+            requestPermissions(new String[]{Manifest.permission.ACCESS_MEDIA_LOCATION}, CODIGO_RESP);
 
         } else {
-            Toast.makeText(this, "Permiso para Media ha sido concedido",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Permiso para Ubicacion ha sido concedido",Toast.LENGTH_SHORT).show();
         }
 
     }
