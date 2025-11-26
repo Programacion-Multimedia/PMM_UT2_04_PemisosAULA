@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         int permisoBiometrico = ContextCompat.checkSelfPermission(this, Manifest.permission.USE_BIOMETRIC);
-
         if (permisoBiometrico == PackageManager.PERMISSION_GRANTED) {
             Toast.makeText(this, "Permiso para Biometria concedido",Toast.LENGTH_SHORT).show();
         } else {
