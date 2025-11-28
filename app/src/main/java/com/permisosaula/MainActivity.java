@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         int permisoMedia = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_MEDIA_LOCATION);
+
         if (permisoMedia == PackageManager.PERMISSION_DENIED) {
 
             int CODIGO_RESP = 200;
